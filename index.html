@@ -1,149 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
 <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>SPRAXXX.TV – Building what's next</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        background-color: #0a0a23;
-        color: #f2f2f7;
-        line-height: 1.6;
-      }
-      a {
-        color: #6fa8dc;
-        text-decoration: none;
-      }
-      .container {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-      }
-      header {
-        text-align: center;
-        padding: 4rem 1rem 2rem;
-      }
-      header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      header p {
-        font-size: 1.125rem;
-        max-width: 600px;
-        margin: 0 auto 2rem;
-      }
-      .button-group {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      .button {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        background-color: #365df0;
-        color: #fff;
-        border-radius: 4px;
-        transition: background-color 0.2s ease;
-        font-weight: 600;
-      }
-      .button:hover {
-        background-color: #2a49c4;
-      }
-      section {
-        margin: 3rem 0;
-      }
-      section h2 {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-      }
-      .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      .card {
-        flex: 1 1 280px;
-        background-color: #161a33;
-        padding: 1.5rem;
-        border-radius: 8px;
-        border: 1px solid #282c53;
-      }
-      .card span {
-        display: inline-block;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        background-color: #3055a5;
-        color: #d0e0ff;
-        padding: 0.25rem 0.5rem;
-        border-radius: 9999px;
-        margin-bottom: 0.75rem;
-      }
-      footer {
-        text-align: center;
-        padding: 2rem 1rem;
-        font-size: 0.875rem;
-        border-top: 1px solid #282c53;
-        margin-top: 4rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>We’re building what’s next.</h1>
-        <p>
-          SPRAXXX is crafting tools and experiences that connect people and power
-          communities. Get a peek at what’s coming, and reach out if you want
-          to collaborate.
-        </p>
-        <div class="button-group">
-          <a class="button" href="#roadmap">See what’s coming</a>
-          <a class="button" href="mailto:info@spraxxx.tv">Contact us</a>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SPRAXXX.TV – Building what's next</title>
+<style>
+  /* ---- Animated Color Flow Background ---- */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* behind all content */
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00ff00, #00aaff, #8a2be2, #ff00ff, #ff0000);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+  }
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ---- Existing Styles ---- */
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #0a0a23; /* fallback if gradient fails */
+    color: #f2f2f7;
+    line-height: 1.6;
+    position: relative;
+  }
+  a {
+    color: #6fa8dc;
+    text-decoration: none;
+  }
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  header p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #365df0;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-weight: 600;
+  }
+  .button:hover {
+    background-color: #2a49c4;
+  }
+  section {
+    margin: 3rem 0;
+  }
+  section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .card {
+    flex: 1 1 280px;
+    background-color: rgba(22, 26, 51, 0.85); /* slight transparency for color flow */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #282c53;
+  }
+  .card span {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background-color: #3055a5;
+    color: #d0e0ff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.875rem;
+    border-top: 1px solid #282c53;
+    margin-top: 4rem;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>We’re building what’s next.</h1>
+      <p>
+        SPRAXXX is crafting tools and experiences that connect people and power
+        communities. Get a peek at what’s coming, and reach out if you want
+        to collaborate.
+      </p>
+      <div class="button-group">
+        <a class="button" href="#roadmap">See what’s coming</a>
+        <a class="button" href="mailto:info@spraxxx.tv">Contact us</a>
+      </div>
+    </header>
+
+    <section id="roadmap">
+      <h2>Roadmap note</h2>
+      <p>Early landing going live now; full identity portal and registrations following.</p>
+      <ul>
+        <li>✅ Domain live</li>
+        <li>🔒 HTTPS pending (DNS/Cert propagation)</li>
+      </ul>
+    </section>
+
+    <section id="features">
+      <h2>What’s next</h2>
+      <div class="cards">
+        <div class="card">
+          <span>In Design</span>
+          <h3>Community Hub</h3>
+          <p>Events, updates, and a simple way to stay connected with the brotherhood.</p>
         </div>
-      </header>
-      <section id="roadmap">
-        <h2>Roadmap note</h2>
-        <p>Early landing going live now; full identity portal and registrations following.</p>
-        <ul>
-          <li>✅ Domain live</li>
-          <li>🔒 HTTPS pending (DNS/Cert propagation)</li>
-        </ul>
-      </section>
-      <section id="features">
-        <h2>What’s next</h2>
-        <div class="cards">
-          <div class="card">
-            <span>In Design</span>
-            <h3>Community Hub</h3>
-            <p>Events, updates, and a simple way to stay connected with the brotherhood.</p>
-          </div>
-          <div class="card">
-            <span>Exploring</span>
-            <h3>Resource Library</h3>
-            <p>Curated content, tools, and templates to support ministry work and collaboration.</p>
-          </div>
+        <div class="card">
+          <span>Exploring</span>
+          <h3>Resource Library</h3>
+          <p>Curated content, tools, and templates to support ministry work and collaboration.</p>
         </div>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Questions or ideas? We’d love to hear from you.</p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:info@spraxxx.tv">info@spraxxx.tv</a><br />
-          <strong>Location:</strong> Toronto, Ontario, Canada
-        </p>
-      </section>
-      <section id="follow">
-        <h2>Follow us</h2>
-        <p>We share updates as we build in public.</p>
-        <a class="button" href="https://facebook.com" target="_blank" rel="noopener">Open Facebook</a>
-      </section>
-    </div>
-<footer>&copy; 2025 SPRAXXX.TV</foter>
-  </body>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Questions or ideas? We’d love to hear from you.</p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:info@spraxxx.tv">info@spraxxx.tv</a><br />
+        <strong>Location:</strong> Toronto, Ontario, Canada
+      </p>
+    </section>
+
+    <section id="follow">
+      <h2>Follow us</h2>
+      <p>We share updates as we build in public.</p>
+      <a class="button" href="https://facebook.com" target="_blank" rel="noopener">Open Facebook</a>
+    </section>
+  </div>
+
+  <footer>&copy; 2025 SPRAXXX.TV</footer>
+</body>
 </html>
