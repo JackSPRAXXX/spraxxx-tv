@@ -105,6 +105,38 @@
             background: #e0a800;
         }
 
+        /* --- Featured Music Section --- */
+        section#music-cover {
+            padding:4rem 1rem;
+            text-align:center;
+            background:linear-gradient(90deg,#111,#222);
+            border-top:2px solid #f5b800;
+            border-bottom:2px solid #f5b800;
+            margin-top:3rem;
+        }
+        section#music-cover h2 {
+            font-size:2.2rem;
+            color:#f5b800;
+            margin-bottom:1rem;
+        }
+        section#music-cover p {
+            color:#ddd;
+            margin-bottom:1.5rem;
+        }
+        section#music-cover a {
+            display:inline-block;
+            padding:1rem 2rem;
+            background:#f5b800;
+            color:#111;
+            font-weight:bold;
+            border-radius:10px;
+            text-transform:uppercase;
+            transition:0.3s;
+        }
+        section#music-cover a:hover {
+            background:#e0a800;
+        }
+
         /* --- Footer --- */
         footer {
             background: #111;
@@ -116,6 +148,7 @@
             margin-top: 3rem;
         }
         footer a { color: #f5b800; }
+
         @media(max-width: 960px){ .plans { flex-direction: column; align-items: center; } }
     </style>
 </head>
@@ -170,6 +203,13 @@
             </div>
 
         </div>
+    </section>
+
+    <!-- Featured Music Cover -->
+    <section id="music-cover">
+        <h2>🎤 Featured Cover: Superman's Song</h2>
+        <p>Check out my cover on StarMaker! Experience the emotion and vibe of my performance.</p>
+        <a href="https://m.starmakerstudios.com/a-vue3/playrecording?app=sm&from_sid=100038698755&guide_type=2&pg_rf_ca_vn=20&pid=recordingsharing&recordingId=7318349473328004&share_type=copylink" target="_blank">Listen to Superman's Song 🎵</a>
     </section>
 
     <!-- Footer -->
