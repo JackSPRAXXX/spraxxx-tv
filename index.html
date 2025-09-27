@@ -1,175 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SPRAXXX.TV – Building what's next</title>
-<style>
-  /* ---- Animated Color Flow Background ---- */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* behind all content */
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00ff00, #00aaff, #8a2be2, #ff00ff, #ff0000);
-    background-size: 400% 400%;
-    animation: gradientFlow 20s ease infinite;
-  }
-  @keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPRAXXX.TV — Claim Your Nation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Reset & Basics --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { background: #111; color: #fff; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; }
 
-  /* ---- Existing Styles ---- */
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: #0a0a23; /* fallback if gradient fails */
-    color: #f2f2f7;
-    line-height: 1.6;
-    position: relative;
-  }
-  a {
-    color: #6fa8dc;
-    text-decoration: none;
-  }
-  .container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-  header {
-    text-align: center;
-    padding: 4rem 1rem 2rem;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  header p {
-    font-size: 1.125rem;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-  }
-  .button-group {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #365df0;
-    color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-    font-weight: 600;
-  }
-  .button:hover {
-    background-color: #2a49c4;
-  }
-  section {
-    margin: 3rem 0;
-  }
-  section h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .card {
-    flex: 1 1 280px;
-    background-color: rgba(22, 26, 51, 0.85); /* slight transparency for color flow */
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #282c53;
-  }
-  .card span {
-    display: inline-block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    background-color: #3055a5;
-    color: #d0e0ff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 9999px;
-    margin-bottom: 0.75rem;
-  }
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.875rem;
-    border-top: 1px solid #282c53;
-    margin-top: 4rem;
-  }
-</style>
+        /* --- Header --- */
+        header { background: #1c1c1c; padding: 2rem; text-align: center; }
+        header h1 { font-size: 2.5rem; color: #f5b800; letter-spacing: 2px; }
+        header p { font-size: 1.1rem; margin-top: 0.5rem; color: #ddd; }
+
+        /* --- Section: Pricing Plans --- */
+        section { padding: 3rem 1rem; max-width: 1200px; margin: 0 auto; }
+        .plans { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+        .plan { background: #222; padding: 2rem; border-radius: 12px; width: 300px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); }
+        .plan h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #f5b800; text-align: center; }
+        .price { font-size: 2rem; text-align: center; margin-bottom: 1rem; color: #fff; }
+        .plan ul { list-style: none; margin-bottom: 1.5rem; }
+        .plan ul li { margin-bottom: 0.7rem; padding-left: 1.2rem; position: relative; }
+        .plan ul li::before { content: '✓'; position: absolute; left: 0; color: #f5b800; }
+
+        .btn { display: block; text-align: center; padding: 0.8rem 1.2rem; border-radius: 8px; font-weight: bold; transition: 0.3s; }
+        .btn.filled { background: #f5b800; color: #111; }
+        .btn.filled:hover { background: #e0a800; }
+
+        /* --- Footer --- */
+        footer { background: #1c1c1c; text-align: center; padding: 2rem; color: #888; font-size: 0.9rem; margin-top: 3rem; }
+        footer a { color: #f5b800; }
+        @media(max-width: 960px){ .plans { flex-direction: column; align-items: center; } }
+    </style>
 </head>
 <body>
-  <div class="container">
+
+    <!-- Header -->
     <header>
-      <h1>We’re building what’s next.</h1>
-      <p>
-        SPRAXXX is crafting tools and experiences that connect people and power
-        communities. Get a peek at what’s coming, and reach out if you want
-        to collaborate.
-      </p>
-      <div class="button-group">
-        <a class="button" href="#roadmap">See what’s coming</a>
-        <a class="button" href="mailto:info@spraxxx.tv">Contact us</a>
-      </div>
+        <h1>SPRAXXX.TV</h1>
+        <p>Step into the Nation. Claim your identity. Join the movement.</p>
     </header>
 
-    <section id="roadmap">
-      <h2>Roadmap note</h2>
-      <p>Early landing going live now; full identity portal and registrations following.</p>
-      <ul>
-        <li>✅ Domain live</li>
-        <li>🔒 HTTPS pending (DNS/Cert propagation)</li>
-      </ul>
-    </section>
+    <!-- Pricing / Membership Plans -->
+    <section id="membership">
+        <h2 style="text-align:center; margin-bottom: 2rem;">Membership Packages</h2>
+        <div class="plans">
 
-    <section id="features">
-      <h2>What’s next</h2>
-      <div class="cards">
-        <div class="card">
-          <span>In Design</span>
-          <h3>Community Hub</h3>
-          <p>Events, updates, and a simple way to stay connected with the brotherhood.</p>
+            <!-- $50 IAM Nation -->
+            <div class="plan">
+                <h3>Super User — IAM Nation</h3>
+                <div class="price">$50 one-time</div>
+                <ul>
+                    <li>Verified identity key (Stripe)</li>
+                    <li>IAM Companion at spraxxx.key.ai</li>
+                    <li>spraxxx.tv account + Dignity Wall posts</li>
+                    <li>@spraxxx.com + inbox.me email</li>
+                    <li>VPN access</li>
+                    <li>Free entry to Nation halls</li>
+                </ul>
+                <a class="btn filled" href="https://buy.stripe.com/cNi8wO7iu8fKeUY9PT8IU0c" target="_blank" rel="noopener">Claim Sovereignty</a>
+            </div>
+
+            <!-- $15 Pre-launch -->
+            <div class="plan">
+                <h3>Nation Seat — Pre-launch</h3>
+                <div class="price">$15/month</div>
+                <ul>
+                    <li>Access to community streams</li>
+                    <li>Seat at the table — influence & updates</li>
+                </ul>
+                <a class="btn filled" href="https://buy.stripe.com/8x214m6eq1Rm6os7HL8IU0d" target="_blank" rel="noopener">Join the Pre-launch</a>
+            </div>
+
+            <!-- $5 Supporter -->
+            <div class="plan">
+                <h3>Supporter Package</h3>
+                <div class="price">$5 one-time</div>
+                <ul>
+                    <li>Help SPRAXXX grow</li>
+                    <li>Placeholder perks</li>
+                </ul>
+                <a class="btn filled" href="https://buy.stripe.com/cNi4gy5amanSeUY6DH8IU0e" target="_blank" rel="noopener">Support the Nation</a>
+            </div>
+
         </div>
-        <div class="card">
-          <span>Exploring</span>
-          <h3>Resource Library</h3>
-          <p>Curated content, tools, and templates to support ministry work and collaboration.</p>
-        </div>
-      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Questions or ideas? We’d love to hear from you.</p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:info@spraxxx.tv">info@spraxxx.tv</a><br />
-        <strong>Location:</strong> Toronto, Ontario, Canada
-      </p>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SPRAXXX.TV | Built with vision, powered by community. | <a href="mailto:contact@spraxxx.com">Contact</a></p>
+    </footer>
 
-    <section id="follow">
-      <h2>Follow us</h2>
-      <p>We share updates as we build in public.</p>
-      <a class="button" href="https://facebook.com" target="_blank" rel="noopener">Open Facebook</a>
-    </section>
-  </div>
-
-  <footer>&copy; 2025 SPRAXXX.TV</footer>
 </body>
 </html>
