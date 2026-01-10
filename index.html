@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPRAXXX.TV — The Nation on Air</title>
+    <title>SPRAXXX.TV — Brotherhood on Air</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,78 +12,53 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* --- Featured Media Section --- */
-        section#featured-media {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 1rem;
-        }
-        section#featured-media h2 {
-            font-size: 2.2rem;
-            color: #f5b800;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .media-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-        }
-        .media-card {
-            background: #111;
-            border: 2px solid #f5b800;
-            border-radius: 15px;
-            padding: 1.5rem;
-            width: 320px;
-            box-shadow: 0 0 20px rgba(245,184,0,0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .media-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 30px rgba(245,184,0,0.6);
-        }
-        .media-card h3 {
-            font-size: 1.5rem;
-            color: #f5b800;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .media-card p {
-            color: #ddd;
-            text-align: center;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Responsive */
-        @media(max-width: 960px) {
-            .media-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>SPRAXXX.TV</h1>
-        <p>The Nation on Air — Music, Covers, Community Media</p>
-    </header>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>SPRAXXX.TV</h1>
+            <p class="hero-tagline">Brotherhood on Air — Open Mic, Truth, and Movement</p>
+            <p class="hero-mission">Real voices. Real music. Real community. This is where the nation speaks.</p>
+            <div class="hero-cta">
+                <a href="#submit" class="btn btn-primary">Submit Your Track</a>
+                <a href="#dignity-wall" class="btn btn-secondary">Join the Wall</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- Featured Media -->
+    <!-- Track of the Week -->
+    <section id="track-of-week">
+        <h2><span aria-hidden="true">🔥</span> Track of the Week</h2>
+        <div class="featured-track">
+            <div class="track-player">
+                <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/pQ2jtyVKWhc"
+                    title="Featured Track"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="track-info">
+                <h3>Featured This Week</h3>
+                <p>This week's featured content showcases the best of SPRAXXX Nation. Submit your track to be featured next.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Media Grid -->
     <section id="featured-media">
-        <h2>🎵 Featured Media</h2>
+        <h2><span aria-hidden="true">🎵</span> Featured Media</h2>
         <div class="media-grid">
 
             <!-- StarMaker Cover -->
             <div class="media-card">
                 <h3>Superman's Song — Cover by Maple</h3>
-                <p>Check out this live performance on StarMaker.</p>
+                <p>Live performance on StarMaker.</p>
                 <a class="btn" href="https://m.starmakerstudios.com/a-vue3/playrecording?app=sm&from_sid=100038698755&guide_type=2&pg_rf_ca_vn=20&pid=recordingsharing&recordingId=7318349473328004&share_type=copylink" target="_blank" rel="noopener noreferrer" aria-label="Listen to Superman's Song cover on StarMaker">
                     Listen Now <span aria-hidden="true">🎧</span>
                 </a>
@@ -92,7 +67,7 @@
             <!-- YouTube Video -->
             <div class="media-card">
                 <h3>Featured YouTube Clip</h3>
-                <p>Watch this featured video on YouTube.</p>
+                <p>Watch the latest from the community.</p>
                 <a class="btn" href="https://youtu.be/pQ2jtyVKWhc?si=T8Czv7_W61iGwzvo" target="_blank" rel="noopener noreferrer" aria-label="Watch featured YouTube video">
                     Watch Now <span aria-hidden="true">📺</span>
                 </a>
@@ -101,9 +76,84 @@
         </div>
     </section>
 
+    <!-- Community Creators -->
+    <section id="community">
+        <h2><span aria-hidden="true">👥</span> Community Creators</h2>
+        <div class="creators-grid">
+            <div class="creator-card">
+                <div class="creator-badge">⭐</div>
+                <h3>KingHorn</h3>
+                <p>Community voice and storyteller</p>
+            </div>
+            <div class="creator-card">
+                <div class="creator-badge">⭐</div>
+                <h3>Gusta Gusta</h3>
+                <p>Music and spoken word artist</p>
+            </div>
+            <div class="creator-card">
+                <div class="creator-badge">✨</div>
+                <h3>Your Name Here</h3>
+                <p>Submit your track to get featured</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dignity Wall -->
+    <section id="dignity-wall">
+        <h2><span aria-hidden="true">💬</span> The Dignity Wall</h2>
+        <p class="section-desc">Voices from the nation. Add your line to the wall.</p>
+        <div class="wall-display">
+            <div class="wall-scroll">
+                <div class="wall-quote">"Brotherhood means showing up when it matters." — Anonymous</div>
+                <div class="wall-quote">"The mic is open. The truth is loud." — Community Voice</div>
+                <div class="wall-quote">"We build together, we rise together." — SPRAXXX Nation</div>
+                <div class="wall-quote">"Real voices, no filters, all truth." — The Movement</div>
+            </div>
+        </div>
+        <div class="wall-form">
+            <h3>Add Your Line</h3>
+            <form id="wall-submit" action="#" method="post">
+                <input type="text" name="handle" placeholder="Your handle (optional)" maxlength="50">
+                <textarea name="quote" placeholder="Your line for the wall..." maxlength="280" rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary">Post to Wall</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Internet Archive Classic -->
+    <section id="archive">
+        <h2><span aria-hidden="true">📼</span> Internet Archive Classic</h2>
+        <p class="section-desc">Preserving the culture. Explore classics from the archive.</p>
+        <div class="archive-grid">
+            <div class="archive-card">
+                <h3>Classic Collection</h3>
+                <p>Browse archived content from the community vault.</p>
+                <a href="#" class="btn">Explore Archive</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Forms -->
+    <section id="submit">
+        <h2><span aria-hidden="true">📤</span> Submit Your Track</h2>
+        <p class="section-desc">Share your music, spoken word, or freestyle. Get featured on SPRAXXX.TV.</p>
+        <div class="submit-form">
+            <form id="track-submit" action="#" method="post">
+                <input type="text" name="artist" placeholder="Artist/Creator Name" required>
+                <input type="text" name="title" placeholder="Track Title" required>
+                <input type="url" name="link" placeholder="Link to your track (YouTube, StarMaker, etc.)" required>
+                <textarea name="description" placeholder="Tell us about your track..." rows="4"></textarea>
+                <button type="submit" class="btn btn-primary">Submit Track</button>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 SPRAXXX.TV | Built with vision, powered by community. | <a href="legal.html">Legal</a> | <a href="privacy.html">Privacy</a> | <a href="status.html">Status</a> | <a href="mailto:contact@spraxxx.com">Contact</a></p>
+        <div class="footer-content">
+            <p class="footer-tagline">Built with vision, powered by community.</p>
+            <p>&copy; 2026 SPRAXXX.TV | <a href="legal.html">Legal</a> | <a href="privacy.html">Privacy</a> | <a href="status.html">Status</a> | <a href="mailto:contact@spraxxx.com">Contact</a></p>
+        </div>
     </footer>
 
 </body>
