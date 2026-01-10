@@ -49,6 +49,33 @@ header p {
     margin-top: 0.5rem;
 }
 
+/* --- Content Sections --- */
+section {
+    padding: 4rem 1rem;
+}
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #f5b800;
+    margin-bottom: 2rem;
+}
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 0 1rem;
+}
+.content-wrapper h3 {
+    color: #f5b800;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+.content-wrapper ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
 /* --- Membership Section --- */
 section#membership {
     padding: 4rem 1rem;
