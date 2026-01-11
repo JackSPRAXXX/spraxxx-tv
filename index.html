@@ -12,138 +12,140 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* --- Reset & Basics --- */
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Orbitron', sans-serif; }
-        body { background:#0a0a0a; color:#fff; line-height:1.6; overflow-x:hidden; }
-        a { text-decoration:none; color:inherit; }
-        img { max-width:100%; display:block; }
-
-        /* --- Header --- */
-        header {
-            text-align:center;
-            padding:4rem 1rem 2rem 1rem;
-            background:linear-gradient(90deg,#111,#222);
-            border-bottom:2px solid #f5b800;
-        }
-        header h1 {
-            font-size:3rem;
-            color:#f5b800;
-            text-shadow:0 0 10px #f5b800,0 0 20px #f5b800;
-        }
-        header p {
-            font-size:1.2rem;
-            color:#ddd;
-            margin-top:0.5rem;
-        }
-
-        /* --- Featured Media Section --- */
-        section#featured-media {
-            max-width:1200px;
-            margin:4rem auto;
-            padding:0 1rem;
-        }
-        section#featured-media h2 {
-            font-size:2.2rem;
-            color:#f5b800;
-            text-align:center;
-            margin-bottom:2rem;
-        }
-        .media-grid {
-            display:flex;
-            flex-wrap:wrap;
-            gap:2rem;
-            justify-content:center;
-        }
-        .media-card {
-            background:#111;
-            border:2px solid #f5b800;
-            border-radius:15px;
-            padding:1.5rem;
-            width:320px;
-            box-shadow:0 0 20px rgba(245,184,0,0.3);
-            transition:transform 0.3s, box-shadow 0.3s;
-        }
-        .media-card:hover {
-            transform:translateY(-8px);
-            box-shadow:0 0 30px rgba(245,184,0,0.6);
-        }
-        .media-card h3 {
-            font-size:1.5rem;
-            color:#f5b800;
-            text-align:center;
-            margin-bottom:1rem;
-        }
-        .media-card a.btn {
-            display:block;
-            text-align:center;
-            margin-top:1rem;
-            padding:1rem 1.5rem;
-            background:#f5b800;
-            color:#111;
-            font-weight:bold;
-            border-radius:10px;
-            text-transform:uppercase;
-            transition:0.3s;
-        }
-        .media-card a.btn:hover {
-            background:#e0a800;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background:#111;
-            text-align:center;
-            padding:2rem 1rem;
-            color:#888;
-            font-size:0.9rem;
-            border-top:2px solid #f5b800;
-            margin-top:3rem;
-        }
-        footer a { color:#f5b800; }
-
-        /* Responsive */
-        @media(max-width:960px){ .media-grid{flex-direction:column; align-items:center;} }
-    </style>
 </head>
 <body>
 
     <!-- Header -->
-    <header>
-        <h1>SPRAXXX.TV</h1>
-        <p>The Nation on Air — Music, Covers, Community Media</p>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="logo">SPRAXXX.TV</div>
+            <nav class="nav-links">
+                <a href="#ip">IP</a>
+                <a href="#membership">Membership</a>
+                <a href="#results">Results</a>
+                <a href="#featured-media">Media</a>
+                <a href="status.html">Status</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </div>
+        <div class="hero">
+            <h1>SPRAXXX.TV</h1>
+            <p>The Nation on Air — Music, Covers, Community Media</p>
+            <div class="cta-row">
+                <a class="btn" href="#membership">Claim Sovereignty</a>
+                <a class="btn ghost" href="legal.html">Review Legal</a>
+            </div>
+        </div>
     </header>
 
-    <!-- Featured Media -->
-    <section id="featured-media">
-        <h2>🎵 Featured Media</h2>
-        <div class="media-grid">
+    <main>
+        <!-- Membership -->
+        <section id="membership">
+            <h2 class="section-title">💎 Membership Packages</h2>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Super User — IAM Nation</h3>
+                    <p class="price">$50 one-time</p>
+                    <ul>
+                        <li>Verified identity key (via Stripe)</li>
+                        <li>Access to your IAM Companion at spraxxx.key.ai</li>
+                        <li>SPRAXXX.TV account + Dignity Wall posts</li>
+                        <li>@spraxxx.com + inbox.me email</li>
+                        <li>VPN access</li>
+                        <li>Free entry to Nation halls</li>
+                    </ul>
+                    <a class="btn" href="https://buy.stripe.com/cNi8wO7iu8fKeUY9PT8IU0c" target="_blank" rel="noopener">Claim Sovereignty →</a>
+                </div>
 
-            <!-- StarMaker Cover -->
-            <div class="media-card">
-                <h3>Superman’s Song — Cover by Maple</h3>
-                <p style="color:#ddd; text-align:center; font-size:0.9rem; margin-bottom:1rem;">
-                    Check out this live performance on StarMaker.
-                </p>
-                <a class="btn" href="https://m.starmakerstudios.com/a-vue3/playrecording?app=sm&from_sid=100038698755&guide_type=2&pg_rf_ca_vn=20&pid=recordingsharing&recordingId=7318349473328004&share_type=copylink" target="_blank">
-                    Listen Now 🎧
-                </a>
+                <div class="plan">
+                    <h3>Nation Seat — Pre-launch</h3>
+                    <p class="price">$15 / month</p>
+                    <ul>
+                        <li>Access to community streams</li>
+                        <li>Seat at the table — influence &amp; updates</li>
+                        <li>Early notice of platform drops</li>
+                    </ul>
+                    <a class="btn" href="https://buy.stripe.com/8x214m6eq1Rm6os7HL8IU0d" target="_blank" rel="noopener">Join the Pre-launch →</a>
+                </div>
+
+                <div class="plan">
+                    <h3>Supporter Package</h3>
+                    <p class="price">$5 one-time</p>
+                    <ul>
+                        <li>Help SPRAXXX grow</li>
+                        <li>Access future supporter perks</li>
+                        <li>Show up for the Nation</li>
+                    </ul>
+                    <a class="btn" href="https://buy.stripe.com/cNi4gy5amanSeUY6DH8IU0e" target="_blank" rel="noopener">Support the Nation →</a>
+                </div>
             </div>
+        </section>
 
-            <!-- Placeholder for additional media -->
-            <div class="media-card">
-                <h3>Another Featured Media</h3>
-                <p style="color:#ddd; text-align:center; font-size:0.9rem; margin-bottom:1rem;">
-                    Placeholder for future media uploads or video highlights.
-                </p>
-                <a class="btn" href="#">
-                    View Media
-                </a>
+        <!-- Results -->
+        <section id="results">
+            <h2 class="section-title">📈 Results</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p class="stat-label">Community Members</p>
+                    <p class="stat-value">2,450</p>
+                    <p class="stat-note">Active supporters across streams and halls</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Identity Keys Issued</p>
+                    <p class="stat-value">1,120</p>
+                    <p class="stat-note">Verified via Stripe onboarding</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Stream Hours</p>
+                    <p class="stat-value">8,700+</p>
+                    <p class="stat-note">Broadcasts from the Nation on air</p>
+                </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- IP Alignment -->
+        <section id="ip">
+            <h2 class="section-title">™ IP Alignment</h2>
+            <p class="section-intro">Core SPRAXXX identities to keep the Nation experience consistent across every repo and drop.</p>
+            <div class="ip-grid">
+                <div class="ip-card">
+                    <h3>LIVE</h3>
+                    <p>Anything broadcast or on-air. Use for streams, premieres, and live Nation updates.</p>
+                </div>
+                <div class="ip-card">
+                    <h3>SWAN</h3>
+                    <p>Grace, resilience, and the creative aesthetic. Apply to visuals, stagecraft, and vibe.</p>
+                </div>
+                <div class="ip-card">
+                    <h3>ANGRY</h3>
+                    <p>Protective, protest energy that powers the movement. Reserve for calls-to-action and rallies.</p>
+                </div>
+                <div class="ip-card">
+                    <h3>WU</h3>
+                    <p>Wisdom, discipline, and lineage. Use for governance docs, protocols, and learning drops.</p>
+                </div>
+            </div>
+            <p class="ip-note">Need to ship something new? Match it to the IP that fits and keep the Nation aligned.</p>
+        </section>
+
+        <!-- Featured Media -->
+        <section id="featured-media">
+            <h2 class="section-title">🎵 Featured Media</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <h3>Superman’s Song — Cover by Maple</h3>
+                    <p>Check out this live performance on StarMaker.</p>
+                    <a class="btn" href="https://m.starmakerstudios.com/a-vue3/playrecording?app=sm&from_sid=100038698755&guide_type=2&pg_rf_ca_vn=20&pid=recordingsharing&recordingId=7318349473328004&share_type=copylink" target="_blank" rel="noopener">Listen Now 🎧</a>
+                </div>
+
+                <div class="media-card">
+                    <h3>Another Featured Media</h3>
+                    <p>Placeholder for future media uploads or video highlights.</p>
+                    <a class="btn ghost" href="#">View Media</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
