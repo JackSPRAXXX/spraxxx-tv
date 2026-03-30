@@ -40,6 +40,8 @@ SPRAXXX.TV is a pre-launch platform for the IAM Nation, offering verified digita
 - **Membership grid:** the three packages above with direct Stripe checkout links.
 - **Results snapshot:** live stats for the Nation community, issued identity keys, and stream hours.
 - **IP alignment:** highlights the core SPRAXXX identities (LIVE, SWAN, ANGRY, WU) to keep repos and drops on-brand.
+- **Pantry positioning:** language guardrails that frame the Pantry as reciprocal infrastructure (not charity).
+- **Divine Court track:** legal/governance build direction for charter + case ledger development.
 - **Featured media:** rotating highlights like the StarMaker cover of “Superman’s Song.”
 
 ---
